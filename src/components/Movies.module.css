@@ -1,10 +1,31 @@
+
+
 .card {
-  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
-  border-radius: 15px;
-  padding: 15px;
-  margin: 15px auto;
-  width: 220px;
-  box-shadow: 0 6px 15px rgba(46, 125, 50, 0.15);
+  background: #ffffff;
+  width: 280px;
+  min-height: 200px;
+  padding: 22px 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
   text-align: center;
+  margin: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+}
+
+.card h2 {
+  margin: 0 0 12px 0;
+  font-size: 24px;
+  color: #1f3d2f;
+}
+
+.card p {
+  margin: 8px 0;
+  font-size: 17px;
+  line-height: 1.5;
+  color: #4a4a4a;
+}
