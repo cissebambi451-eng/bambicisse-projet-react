@@ -12,3 +12,4 @@ createRoot(document.getElementById('root')).render(
    </BrowserRouter> 
   </StrictMode>,
 )
+// main c 'est la route de l'application 

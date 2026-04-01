@@ -42,7 +42,7 @@ function Home () {
              <div className="test">
       <h1>Test section</h1>
 
-      <button onClick={() => setCounter(counter + 1)}>Add</button>
+      <button onClick={() => setCounter(counter + 1)}>Add</button>   
       <h2>count: {counter}</h2>
       <button onClick={() => setCounter(counter - 1)}>Subtract</button>
 
@@ -52,10 +52,10 @@ function Home () {
 
       <h1>Coucou</h1>
 
-      <div className="users-list">
+      <div className="users-list">  
         {showUsers &&
-          users.map((user, id) => (
-            <UserProfile
+          users.map((user, id) => (  // map est une boucle qui recupere plusieurs elements 
+            <UserProfile   // une fonction doit commencer par une majuscule et le reste variable etc une minuscule
               key={id}
               name={user.name}
               lastname={user.lastname}
