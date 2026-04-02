@@ -97,3 +97,9 @@
   transform: scale(1.05);
   box-shadow: 0 8px 18px rgba(34, 197, 94, 0.3);
 }
+/* Bouton désactivé */
+.movie-card button:disabled {
+  background: #9ca3af; /* gris */
+  cursor: not-allowed;
+  box-shadow: none;
+}

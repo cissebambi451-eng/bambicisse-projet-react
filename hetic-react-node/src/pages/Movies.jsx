@@ -7,7 +7,10 @@ import image3 from "../assets/image.png"
 import image4 from "../assets/joker.jpg"
 import image5 from "../assets/interstellar.jpg"
 import image6 from "../assets/titanic.jpg"
-function Movies() {
+
+
+
+function Movies({ addToFavorites, favorites }) {
   // 🔹 État qui va contenir la liste des films
   const [movies, setMovies] = useState([]);
 
@@ -82,7 +85,14 @@ function Movies() {
             <p>{movie.category}</p>
 
             {/* Bouton */}
-            <button>Ajouter aux favoris</button>  
+            {/* Vérifie si le film est déjà dans les favoris */}
+{favorites.some((fav) => fav.id === movie.id) ? (
+  <button disabled>Déjà en favoris</button>
+) : (
+  <button onClick={() => addToFavorites(movie)}>
+    Ajouter aux favoris
+  </button>
+)}
           </div>
         ))}
       </div>

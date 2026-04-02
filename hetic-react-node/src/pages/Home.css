@@ -63,7 +63,7 @@
   height: 190px;/*longueur*/
   padding: 30px;
   border-radius: 18px;
- background-color: #c6ebcc;
+ background-color: #f4f5f4;
  
   backdrop-filter: blur(10px);
   text-align: center;
@@ -75,7 +75,7 @@
 /* Hover sur les cartes */
 .feature-card:hover {
   transform: scale(1.06);
-  background-color: #d8f3ea;
+  background-color: #a8ff9c;
   color: white;
   box-shadow: 0 14px 30px rgba(34, 197, 94, 0.3);
 }
