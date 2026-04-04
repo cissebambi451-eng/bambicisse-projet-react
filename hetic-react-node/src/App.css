@@ -1,0 +1,9 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+
+  /* Dégradé + effet lumineux */
+  background: radial-gradient(circle at top, #f3f6f4, #a3e3ba, #22c55e);
+
+  min-height: 100vh;
+}

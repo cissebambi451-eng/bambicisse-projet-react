@@ -1,0 +1,101 @@
+
+.home {
+  padding: 70px 20px 50px;
+  min-height: 100vh;
+}
+
+/* Partie principale du haut */
+.home-hero {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+/* Grand titre */
+.home-hero h1 {
+  font-size: 4rem;
+  color: #14532d;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+/* Petit texte */
+.home-hero p {
+  font-size: 1.3rem;
+  color: #355e3b;
+  max-width: 650px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
+
+/* Bouton */
+.home-btn {
+  display: inline-block;
+  text-decoration: none;
+  background: linear-gradient(135deg, #22c55e, #4ade80);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.25);
+  transition: all 0.3s ease;
+}
+
+.home-btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 14px 30px rgba(34, 197, 94, 0.35);
+}
+
+/* Bloc des cartes */
+.home-features {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Carte */
+.feature-card {
+  width: 320px; /*largueur*/
+  height: 190px;/*longueur*/
+  padding: 30px;
+  border-radius: 18px;
+ background-color: #f4f5f4;
+ 
+  backdrop-filter: blur(10px);
+  text-align: center;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover sur les cartes */
+.feature-card:hover {
+  transform: scale(1.06);
+  background-color: #a8ff9c;
+  color: white;
+  box-shadow: 0 14px 30px rgba(34, 197, 94, 0.3);
+}
+
+/* Titre dans les cartes */
+.feature-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #166534;
+}
+
+/* Texte dans les cartes */
+.feature-card p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+/* Texte blanc au hover */
+.feature-card:hover h2,
+.feature-card:hover p {
+  color: white;
+}

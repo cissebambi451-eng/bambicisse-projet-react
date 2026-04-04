@@ -1,0 +1,105 @@
+
+
+/* Section principale de la page */
+.movies-page {
+  padding: 60px 30px; /* espace autour */
+  text-align: center; /* centre le titre et le texte */
+}
+
+/* Titre principal */
+.movies-page h1 {
+  font-size: 3rem; /* grand titre */
+  color: #14532d; /* vert foncé */
+  margin-bottom: 10px;
+}
+
+/* Petit texte sous le titre */
+.movies-page p {
+  color: #355e3b; /* vert-gris */
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+/* Conteneur des cartes */
+.movies-list {
+  display: grid;
+
+  /* 
+    Crée automatiquement des colonnes :
+    - minimum 260px par carte
+    - maximum 1fr = la carte prend l'espace dispo
+  */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+  gap: 30px; /* espace entre les cartes */
+
+  max-width: 1200px; /* limite la largeur totale */
+  margin: 0 auto; /* centre la grille */
+}
+
+/* Carte d'un film */
+.movie-card {
+  padding: 20px;
+  border-radius: 18px;
+
+  /* Dégradé vert doux */
+  background-color: aliceblue;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* Effet quand on passe la souris */
+.movie-card:hover {
+  transform: translateY(-8px) scale(1.03); /* monte un peu + grossit */
+  box-shadow: 0 14px 28px rgba(34, 197, 94, 0.25);
+}
+
+/* Image du film */
+.movie-card img {
+  width: 100%; /* prend toute la largeur de la carte */
+  height: 320px; /* hauteur fixe pour que toutes les images aient la même taille */
+  object-fit: cover; /* recadre bien l'image sans la déformer */
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+/* Titre du film */
+.movie-card h2 {
+  font-size: 1.4rem;
+  color: #166534;
+  margin-bottom: 10px;
+}
+
+/* Paragraphes dans les cartes */
+.movie-card p {
+  margin: 6px 0;
+  color: #374151;
+  font-size: 1rem;
+}
+
+/* Bouton */
+.movie-card button {
+  margin-top: 15px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #22c55e, #4ade80);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover sur le bouton */
+.movie-card button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 18px rgba(34, 197, 94, 0.3);
+}
+/* Bouton désactivé */
+.movie-card button:disabled {
+  background: #9ca3af; /* gris */
+  cursor: not-allowed;
+  box-shadow: none;
+}
