@@ -1,25 +1,14 @@
 import { NavLink } from "react-router";
-function Navbar() {
-    return(
-        <div>
-            <h1>HETIC</h1>
-            <nav>
-                 <NavLink 
-                 to="/home">
-                    Home 
-                 </NavLink>
-                 <NavLink 
-                 to="/About">
-                    About 
-                    </NavLink>
-                 <NavLink
-                  to="/Contacts">
-                    Contacts
-                     </NavLink>
+import "./Navbar.css";
 
-            </nav>
-        </div>
-    )
+function Navbar() {
+  return (
+    <nav>
+      <NavLink to="/">Accueil</NavLink>
+      <NavLink to="/movies">Films</NavLink>
+      <NavLink to="/favorites">Favoris</NavLink>
+    </nav>
+  );
 }
-   
- export default Navbar      
+
+export default Navbar;

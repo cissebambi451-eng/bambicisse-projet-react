@@ -1,85 +1,54 @@
-import UserProfile from "../components/UserProfile";
-import Movies from "../components/Movies";
-import { useState } from "react";
+// On importe NavLink pour créer un lien vers une autre page
+import { NavLink } from "react-router"
+import "./Home.css";
 
-function Home () {
+// Composant Home = page d'accueil
+function Home() {
+  return (
+    // Section principale de la page d'accueil
+    <section className="home">
+      
+      {/* Bloc principal du haut = hero */}
+      <div className="home-hero">
+        {/* Titre principal */}
+        <h1>Bienvenue sur MovieApp 🎬</h1>
 
-    const [counter, setCounter] = useState(0);
-  const [showUsers, setShowUsers] = useState(true);
+        {/* Petit texte de présentation */}
+        <p>
+          Découvrez les meilleurs films et créez votre liste de favoris
+          facilement.
+        </p>
 
-  const users = [
-    { name: "bambi", lastname: "cisse", country: "Mali/Congo" },
-    { name: "aminata", lastname: "konate", country: "France" },
-    { name: "mahamne", lastname: "maiga", country: "brazil" },
-  ];
-
-  const movies = [
-    {
-      name: "Flash",
-      date: "Année de sorties: 2026",
-      country: "Bali",
-      parole: "Vous voulez voir l'homme le plus rapide courir c'est ici!!!!!",
-    },
-    {
-      name: "Danger's force",
-      date: "Année de sorties: 2000",
-      country: "New-york",
-      parole: "d'élève à super héros à suivre...",
-    },
-    {
-      name: "The night agent",
-      date: "Année de sorties: 1990",
-      country: "Chine",
-      parole: "Le matin c'est un homme normale la nuit c 'est un agent du FBI..",
-    },
-  ];
-    return(
-        <div>
-            <h1>welcome to our site</h1>
-            <p>This is the home page .</p>
-
-
-             <div className="test">
-      <h1>Test section</h1>
-
-      <button onClick={() => setCounter(counter + 1)}>Add</button>   
-      <h2>count: {counter}</h2>
-      <button onClick={() => setCounter(counter - 1)}>Subtract</button>
-
-      <button onClick={() => setShowUsers(!showUsers)}>
-        {showUsers ? "Hide Users" : "Show Users"}
-      </button>
-
-      <h1>Coucou</h1>
-
-      <div className="users-list">  
-        {showUsers &&
-          users.map((user, id) => (  // map est une boucle qui recupere plusieurs elements 
-            <UserProfile   // une fonction doit commencer par une majuscule et le reste variable etc une minuscule
-              key={id}
-              name={user.name}
-              lastname={user.lastname}
-              country={user.country}
-            />
-          ))}
+        {/* Bouton qui envoie vers la page films */}
+        <NavLink to="/movies" className="home-btn">
+          Voir les films
+        </NavLink>
       </div>
 
-      <h1>Movies lists</h1>
-
-      <div className="movies-list">
-        {movies.map((movie, id) => (
-          <Movies
-            key={id}
-            name={movie.name}
-            date={movie.date}
-            country={movie.country}
-            parole={movie.parole}
-          />
-        ))}
-      </div>
-    </div>
+      {/* Deuxième partie = cartes d'informations */}
+      <div className="home-features">
+        
+        {/* Carte 1 */}
+        <div className="feature-card">
+          <h2>🎥 Explorer</h2>
+          <p>Parcourez une sélection de films en quelques clics.</p>
         </div>
 
-    )
+        {/* Carte 2 */}
+        <div className="feature-card">
+          <h2>💚 Favoris</h2>
+          <p>Ajoutez vos films préférés dans votre liste personnelle.</p>
+        </div>
+
+        {/* Carte 3 */}
+        <div className="feature-card">
+          <h2>✨ Découvrir</h2>
+          <p>Trouvez de nouvelles idées de films à regarder.</p>
+        </div>
+      </div>
+    </section>
+  );
 }
-export default Home ;
+
+// On exporte le composant pour pouvoir l'utiliser dans App.jsx
+export default Home;
